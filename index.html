@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Khera Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(7, 7, 95);
+            padding: 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 23px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: rgb(91, 196, 180);
+            transform: scale(1.1);
+        }
+
+        .left {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: rgb(91, 196, 180);
+        }
+
+        /* First Section */
+        .firstSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+            line-height: 1.5;
+        }
+
+        .leftSection span {
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .rightSection img {
+            width: 500px;
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .rightSection img:hover {
+            transform: scale(1.05);
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(108, 53, 159);
+        }
+
+        /* Second Section */
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: auto;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .aboutSection {
+            max-width: 80vw;
+            margin: 60px auto;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .aboutSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(91, 196, 180);
+        }
+
+        .aboutContent {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: white;
+        }
+
+        .aboutContent .purple {
+            color: rgb(170, 107, 228);
+            font-weight: bold;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .secondSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(91, 196, 180);
+        }
+
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .vertical {
+            text-align: center;
+            width: 150px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .vertical:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-top {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+
+        .vertical-text {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: rgb(170, 107, 228);
+        }
+
+        .vertical-desc {
+            font-size: 0.9rem;
+            color: gray;
+        }
+
+        .projectsSection {
+            max-width: 80vw;
+            margin: 60px auto;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .projectsSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(91, 196, 180);
+        }
+
+        .projectsGrid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .projectCard {
+            background-color: rgb(7, 7, 95);
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projectCard:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .projectCard img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .projectInfo {
+            padding: 20px;
+            color: white;
+        }
+
+        .projectInfo h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: rgb(170, 107, 228);
+        }
+
+        .projectInfo p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: rgb(200, 200, 200);
+        }
+
+        .contactSection {
+            max-width: 100%;
+            margin: 60px auto;
+            text-align: center;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .contactSection h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(91, 196, 180);
+        }
+
+        .contactGrid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .contactInfo {
+            text-align: center;
+            background-color: rgb(7, 7, 95);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+
+        .contactInfo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .contactInfo h2 {
+            font-size: 1.5rem;
+            color: rgb(170, 107, 228);
+            margin-bottom: 10px;
+        }
+
+        .contactInfo p {
+            font-size: 1rem;
+            color: rgb(200, 200, 200);
+            margin: 5px 0;
+        }
+
+        .contactInfo a {
+            color: rgb(91, 196, 180);
+            text-decoration: none;
+        }
+
+        .contactInfo a:hover {
+            text-decoration: underline;
+        }
+
+        .commentSection {
+            background-color: rgb(7, 7, 95);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+
+        .commentSection h2 {
+            font-size: 1.5rem;
+            color: rgb(170, 107, 228);
+            margin-bottom: 15px;
+        }
+
+        .commentSection form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .commentSection input,
+        .commentSection textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .commentSection button {
+            background-color: rgb(91, 196, 180);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .commentSection button:hover {
+            background-color: rgb(70, 150, 140);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Parth's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Past Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My Name Is <span class="purple">PARTH KHERA</span>
+                <div>and I am a passionate</div>
+                <div>coder and developer</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="ph.png" alt="Parth's Photo">
+            </div>
+        </section>
+        <hr>
+        <section class="aboutSection">
+            <h1>About Me</h1>
+            <div class="aboutContent">
+                <p>
+                    Hello! I'm <span class="purple">Parth Khera</span>, a passionate developer with expertise in Python, AI, and web development.
+                    I love solving complex problems, building innovative solutions, and continuously learning new technologies.
+                    My goal is to create impactful projects that make a difference in the world.
+                </p>
+                <p>
+                    When I'm not coding, I enjoy exploring new ideas, reading about emerging tech trends, and collaborating with like-minded individuals.
+                </p>
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h1>Skills</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="python.png" alt="Python">
+                    <div class="vertical-text">PYTHON</div>
+                    <div class="vertical-desc">Python is a powerful, readable, and versatile programming language loved for its simplicity and wide range of applications.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="c++.png" alt="C++">
+                    <div class="vertical-text">C++</div>
+                    <div class="vertical-desc">C++ is a high-performance, object-oriented programming language that combines low-level control with high-level abstractions.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="sql.png" alt="MySQL">
+                    <div class="vertical-text">MySQL</div>
+                    <div class="vertical-desc">MySQL is a fast, reliable, and widely-used open-source relational database management system for storing and managing structured data.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="api.png" alt="API">
+                    <div class="vertical-text">API</div>
+                    <div class="vertical-desc">An API (Application Programming Interface) is a set of rules that allows different software applications to communicate and exchange data with each other.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="ai.png" alt="AI">
+                    <div class="vertical-text">AI</div>
+                    <div class="vertical-desc">AI (Artificial Intelligence) is the simulation of human intelligence in machines that can learn, reason, and make decisions.</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="projectsSection">
+            <h1>Past Projects</h1>
+            <div class="projectsGrid">
+                <div class="projectCard">
+                    <img src="ai.png" alt="AI Project">
+                    <div class="projectInfo">
+                        <h2>AI Chatbot</h2>
+                        <p>A conversational AI chatbot built using Natural Language Processing (NLP) to assist users with queries in real-time.</p>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img src="api.png" alt="API Project">
+                    <div class="projectInfo">
+                        <h2>Weather API</h2>
+                        <p>A weather forecasting application that uses a RESTful API to provide real-time weather updates for any location.</p>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img src="dest2.png" alt="Automated tour and travel guide">
+                    <div class="projectInfo">
+                        <h2>DESTIFA</h2>
+                        <p>An automated tour and travel guide is a smart system that provides personalized travel assistance, recommendations, and information without human intervention.</p>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img src="port.png" alt="Web Development Project">
+                    <div class="projectInfo">
+                        <h2>Portfolio Website</h2>
+                        <p>A responsive and interactive portfolio website showcasing my skills, projects, and achievements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="contactSection">
+        <h1>Contact Me</h1>
+        <div class="contactGrid">
+            <div class="contactInfo">
+                <img src="vg.jpg" alt="Parth's Photo">
+                <h2>Parth Khera</h2>
+                <p><strong>Phone:</strong>+91-8628951509</p>
+                <p><strong>Email:</strong>kheraparth15@gmail.com</p>
+                <p><strong>GitHub:</strong><a href="https://github.com/parth-khera" target="_blank">github.com/parth-khera</a></p>
+                <p><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/parth-khera-a26627329" target="_blank">linkedin.com/in/parth-khera-a26627329</a></p>
+                <p><strong>LeetCode:</strong> <a href="https://leetcode.com/u/p7ar_th/" target="_blank">leetcode.com/u/p7ar_th</a></p>
+                <p><strong>HackerRank:</strong> <a href="https://www.hackerrank.com/profile/bt24cse1731" target="_blank">hackerrank.com/profile/bt24cse1731</a></p>
+            </div>
+            <div class="commentSection">
+                <h2>Leave a Comment</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Python Developer', 'AI Enthusiast', 'Machine Learning Engineer', 'Web Developer', 'Data Analyst'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>

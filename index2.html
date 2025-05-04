@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Khera Developer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Parth's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                Hi, My Name Is <span class="purple">PARTH KHERA</span>
+                <div>and I am a passionate</div>
+                <div>coder and developer</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="{{ url_for('static', filename='ph.png') }}" alt="Parth's Photo">
+            </div>
+        </section>
+        <hr>
+        <section id="about" class="aboutSection">
+            <h1>About Me</h1>
+            <div class="aboutContent">
+                <p>
+                    Hello! I'm <span class="purple">Parth Khera</span>, a passionate developer with expertise in Python, AI, and web development.
+                    I love solving complex problems, building innovative solutions, and continuously learning new technologies.
+                    My goal is to create impactful projects that make a difference in the world.
+                </p>
+                <p>
+                    When I'm not coding, I enjoy exploring new ideas, reading about emerging tech trends, and collaborating with like-minded individuals.
+                </p>
+            </div>
+        </section>
+        <hr>
+        <section id="skills" class="secondSection">
+            <h1>Skills</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="{{ url_for('static', filename='python.png') }}" alt="Python">
+                    <div class="vertical-text">PYTHON</div>
+                    <div class="vertical-desc">Python is a powerful, readable, and versatile programming language loved for its simplicity and wide range of applications.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="{{ url_for('static', filename='c++.png') }}" alt="C++">
+                    <div class="vertical-text">C++</div>
+                    <div class="vertical-desc">C++ is a high-performance, object-oriented programming language that combines low-level control with high-level abstractions.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="{{ url_for('static', filename='sql.png') }}" alt="MySQL">
+                    <div class="vertical-text">MySQL</div>
+                    <div class="vertical-desc">MySQL is a fast, reliable, and widely-used open-source relational database management system for storing and managing structured data.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="{{ url_for('static', filename='api.png') }}" alt="API">
+                    <div class="vertical-text">API</div>
+                    <div class="vertical-desc">An API (Application Programming Interface) is a set of rules that allows different software applications to communicate and exchange data with each other.</div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="{{ url_for('static', filename='ai.png') }}" alt="AI">
+                    <div class="vertical-text">AI</div>
+                    <div class="vertical-desc">AI (Artificial Intelligence) is the simulation of human intelligence in machines that can learn, reason, and make decisions.</div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="projects" class="projectsSection">
+            <h1>Past Projects</h1>
+            <div class="projectsGrid">
+                <div class="projectCard">
+                    <img src="{{ url_for('static', filename='ai.png') }}" alt="AI Project">
+                    <div class="projectInfo">
+                        <h2>AI Chatbot</h2>
+                        <p>A conversational AI chatbot built using Natural Language Processing (NLP) to assist users with queries in real-time.</p>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img src="{{ url_for('static', filename='api.png') }}" alt="API Project">
+                    <div class="projectInfo">
+                        <h2>Weather API</h2>
+                        <p>A weather forecasting application that uses a RESTful API to provide real-time weather updates for any location.</p>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img src="{{ url_for('static', filename='dest2.png') }}" alt="Automated tour and travel guide">
+                    <div class="projectInfo">
+                        <h2>DESTIFA</h2>
+                        <p>An automated tour and travel guide is a smart system that provides personalized travel assistance, recommendations, and information without human intervention.</p>
+                    </div>
+                </div>
+                <div class="projectCard">
+                    <img src="{{ url_for('static', filename='port.png') }}" alt="Web Development Project">
+                    <div class="projectInfo">
+                        <h2>Portfolio Website</h2>
+                        <p>A responsive and interactive portfolio website showcasing my skills, projects, and achievements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="contact" class="contactSection">
+            <h1>Contact Me</h1>
+            <div class="contactGrid">
+                <div class="contactInfo">
+                    <img src="{{ url_for('static', filename='vg.jpg') }}" alt="Parth's Photo">
+                    <h2>Parth Khera</h2>
+                    <p><strong>Phone:</strong>+91-8628951509</p>
+                    <p><strong>Email:</strong>kheraparth15@gmail.com</p>
+                    <p><strong>GitHub:</strong><a href="https://github.com/parth-khera" target="_blank">github.com/parth-khera</a></p>
+                    <p><strong>LinkedIn:</strong><a href="https://www.linkedin.com/in/parth-khera-a26627329" target="_blank">linkedin.com/in/parth-khera-a26627329</a></p>
+                    <p><strong>LeetCode:</strong> <a href="https://leetcode.com/u/p7ar_th/" target="_blank">leetcode.com/u/p7ar_th</a></p>
+                    <p><strong>HackerRank:</strong> <a href="https://www.hackerrank.com/profile/bt24cse1731" target="_blank">hackerrank.com/profile/bt24cse1731</a></p>
+                </div>
+                <div class="commentSection">
+                    <h2>Leave a Comment</h2>
+                    <form>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Python Developer', 'AI Enthusiast', 'Machine Learning Engineer', 'Web Developer', 'Data Analyst'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
